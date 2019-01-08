@@ -1,0 +1,54 @@
+﻿<Window x:Class="TemaFacultativaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TemaFacultativaWPF"
+        xmlns:materiaDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Generator" Height="450" Width="800">
+    <Grid Name="GridOrientation">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <Button Name="LoadButton" Width="50" Margin="3 3 3 3" ToolTip="Incarca Gramatica"
+                    Click="LoadButton_Click">
+                <materiaDesign:PackIcon Kind="File"/>
+            </Button>
+            
+            <Button Name="RunButton"  Width="50" Margin="3 3 3 3" 
+                    Click="RunButton_Click" ToolTip="Ruleaza algoritm">
+                <materiaDesign:PackIcon Kind="CableCar"/>
+            </Button>
+
+            <Button Name="CompileButton"  Width="50" Margin="3 3 3 3" 
+                    Click="CompileButton_Click">
+                <materiaDesign:PackIcon Kind="Build" ToolTip="Compileaza" />
+            </Button>
+
+            <Button Name="ExecuteButton"  Width="50" Margin="3 3 3 3" 
+                    Click="ExecuteButton_Click">
+                <materiaDesign:PackIcon Kind="Play" ToolTip="Executa" />
+            </Button>
+
+        </StackPanel>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="0">
+
+            <Button Name="PreviousButton" Width="50" Margin="3 3 3 3" HorizontalAlignment="Right"
+                    ToolTip="Pagina anterioara" Click="PreviousButton_Click">
+                <materiaDesign:PackIcon Kind="PagePrevious"/>
+            </Button>
+
+            <Button Name="NextButton" Width="50" Margin="3 3 3 3" HorizontalAlignment="Right"
+                    ToolTip="Pagina Urmatoare"
+                    Click="NextButton_Click">
+                <materiaDesign:PackIcon Kind="PageNext"/>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Window>
